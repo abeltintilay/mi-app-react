@@ -8,7 +8,7 @@ function App() {
     <div style={{ textAlign: "center", marginTop: "50px" }}>
       <h1>Mi contador en React 🚀</h1>
       <h2>{contador}</h2>
-      
+
       <Boton
   texto="Aumentar"
   onClick={() => setContador(prev => prev + 1)}
@@ -25,6 +25,8 @@ function App() {
   onClick={() => setContador(0)}
   estilo={{ marginLeft: "10px" }}
 />
+
+
       {contador === 10 && <p>¡Llegaste a 10! 🎉</p>}
     </div>
   );
