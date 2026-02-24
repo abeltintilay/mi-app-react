@@ -8,8 +8,23 @@ function App() {
     <div style={{ textAlign: "center", marginTop: "50px" }}>
       <h1>Mi contador en React 🚀</h1>
       <h2>{contador}</h2>
-      <button onClick={() => setContador(contador + 1)}>Aumentar</button>
-      <button onClick={() => setContador(contador > 0 ? contador - 1 : 0)}style={{ marginLeft: "10px" }}>Disminuir</button>
+      
+      <Boton
+  texto="Aumentar"
+  onClick={() => setContador(prev => prev + 1)}
+/>
+
+<Boton
+  texto="Disminuir"
+  onClick={() => setContador(prev => (prev > 0 ? prev - 1 : 0))}
+  estilo={{ marginLeft: "10px" }}
+/>
+
+<Boton
+  texto="Reset"
+  onClick={() => setContador(0)}
+  estilo={{ marginLeft: "10px" }}
+/>
       {contador === 10 && <p>¡Llegaste a 10! 🎉</p>}
     </div>
   );
