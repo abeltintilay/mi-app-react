@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Boton from "./Boton";
 function App() {
   // Creamos el estado del contador, empieza en 0
   const [contador, setContador] = useState(0);
